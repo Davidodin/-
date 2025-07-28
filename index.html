@@ -6,28 +6,80 @@
 <title>Обучающая платформа</title>
 <style>
   body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0; padding: 0;
-    background-color: #f4f4f4; color: #333;
+    background: linear-gradient(to right, #74ebd5, #ACB6E5);
+    color: #333;
   }
   header {
-    background-color: #4CAF50; color: white; padding: 20px; text-align: center;
+    background-color: rgba(0,0,0,0.3);
+    padding: 30px 20px;
+    text-align: center;
+    color: #fff;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2.5em;
   }
   section {
-    padding: 20px; max-width: 800px; margin: auto;
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
   }
-  h1 {
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #fff;
+  }
+  p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #fff;
+  }
+  .auth-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+  }
+  .auth-box {
+    background: rgba(255,255,255,0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    flex: 1 1 300px;
+    max-width: 350px;
+  }
+  .auth-box h3 {
     margin-top: 0;
-  }
-  .auth-form {
-    background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    max-width: 400px; margin: auto;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333;
   }
   input {
-    width: 100%; padding: 8px; margin-top: 4px; margin-bottom: 10px; border-radius: 4px; border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1em;
   }
   button {
-    width: 100%; padding: 10px; background: #4CAF50; color: white; border: none; border-radius: 4px; font-size: 16px;
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  button:hover {
+    background-color: #45a049;
   }
 </style>
 </head>
@@ -39,26 +91,31 @@
 
 <section>
   <h2>Зачем нужен этот сайт?</h2>
-  <p>Здесь вы можете учиться у лучших преподавателей со всего мира, создавать свои курсы и зарабатывать, делясь знаниями. Всё онлайн и доступно из любой страны.</p>
+  <p>Учитесь у лучших преподавателей со всего мира, создавайте свои курсы и зарабатывайте, делясь знаниями. Всё онлайн и доступно из любой страны.</p>
 </section>
 
 <section>
   <h2 style="text-align:center;">Войти или зарегистрироваться</h2>
-  <div class="auth-form">
-    <h3>Вход</h3>
-    <form action="#" method="post">
-      <input type="email" placeholder="Email" required>
-      <input type="password" placeholder="Пароль" required>
-      <button type="submit">Войти</button>
-    </form>
-    <hr>
-    <h3>Регистрация</h3>
-    <form action="#" method="post">
-      <input type="text" placeholder="Имя" required>
-      <input type="email" placeholder="Email" required>
-      <input type="password" placeholder="Пароль" required>
-      <button type="submit">Зарегистрироваться</button>
-    </form>
+  <div class="auth-container">
+    <!-- Вход -->
+    <div class="auth-box">
+      <h3>Вход</h3>
+      <form action="#" method="post">
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Пароль" required>
+        <button type="submit">Войти</button>
+      </form>
+    </div>
+    <!-- Регистрация -->
+    <div class="auth-box">
+      <h3>Регистрация</h3>
+      <form action="#" method="post">
+        <input type="text" placeholder="Имя" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Пароль" required>
+        <button type="submit">Зарегистрироваться</button>
+      </form>
+    </div>
   </div>
 </section>
 
