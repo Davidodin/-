@@ -21,87 +21,37 @@
     font-size: 2.5em;
     color: #fff;
   }
-  /* Кнопка "О сайте" */
-  .info-btn {
-    display: block;
-    margin: 20px auto;
-    padding: 12px 24px;
-    background-color: #ff7f50;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.2em;
-    cursor: pointer;
-  }
-  /* Модальное окно */
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    left: 0; top: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.6);
+  /* Контейнер для двух блоков: слева и справа */
+  .content-container {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-  }
-  .modal-content {
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    max-width: 700px;
-    width: 90%;
-    box-shadow: 0 0 20px rgba(0,0,0,0.3);
-    position: relative;
-  }
-  .close-btn {
-    position: absolute;
-    top: 10px; right: 15px;
-    font-size: 1.5em;
-    cursor: pointer;
-    color: #333;
-  }
-  /* Тексты внутри окна */
-  .popup-text {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    line-height: 1.5;
-  }
-  /* Остальной стиль — как раньше */
-  /* ... (оставьте стили из предыдущего кода) ... */
-  body {
-    font-family: 'Arial', sans-serif;
-    margin: 0; padding: 0;
-    background: linear-gradient(to right, #74ebd5, #ACB6E5);
-    color: #333;
-  }
-  header {
-    background-color: rgba(0,0,0,0.3);
-    padding: 30px 20px;
-    text-align: center;
-  }
-  header h1 {
-    margin: 0;
-    font-size: 2.5em;
-    color: #fff;
-  }
-  /* Большой красивый блок с текстом */
-  .intro-block {
-    background: rgba(255,255,255,0.8);
-    padding: 40px 20px;
-    border-radius: 10px;
     margin: 20px auto;
-    max-width: 900px;
-    text-align: center;
+    max-width: 1200px;
   }
-  .intro-block h2 {
+  /* Левый блок — преимущества */
+  .left-block {
+    flex: 1 1 45%;
+    min-width: 300px;
+    padding: 20px;
+  }
+  /* Правый блок — почему выбирают сайт */
+  .right-block {
+    flex: 1 1 45%;
+    min-width: 300px;
+    padding: 20px;
+  }
+  /* Заголовки блоков */
+  .left-block h3, .right-block h3 {
+    font-size: 1.8em;
     margin-top: 0;
-    font-size: 2em;
+    margin-bottom: 15px;
     color: #333;
   }
-  .intro-block p {
+  /* Тексты внутри блоков */
+  .left-block p, .right-block p {
     font-size: 1.2em;
     line-height: 1.5;
-    margin: 20px 0;
   }
   /* Форма входа и регистрации */
   .auth-container {
@@ -123,3 +73,50 @@
     margin-top: 0;
     text-align: center;
     margin-bottom: 15px;
+  }
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+  }
+  button:hover {
+    background-color: #45a049;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Добро пожаловать! Обучающая платформа для всех</h1>
+</header>
+
+<!-- Контейнер с двумя блоками: слева и справа -->
+<div class="content-container">
+  <!-- Слева — преимущества -->
+  <div class="left-block">
+    <h3>На нашем сайте вы можете учиться у профессионалов, создавать свои курсы, делиться опытом и зарабатывать, расширяя свои горизонты.</h3>
+    <p>Мы делаем обучение доступным, интересным и прибыльным для каждого!</p>
+  </div>
+  <!-- Справа — почему выбирают сайт -->
+  <div class="right-block">
+    <h3>Почему выбирают наш сайт?</h3>
+    <p>Это уникальная платформа, объединяющая лучших преподавателей со всего мира. Здесь вы найдете разнообразие курсов по самым востребованным направлениям, сможете создавать собственные программы и зарабатывать, делясь знаниями. Всё это — в удобном онлайн-формате, доступном из любой точки планеты.</p>
+  </div>
+</div>
+
+<!-- Остальной ваш код (форма входа/регистрации и т.п.) — вставьте сюда, если нужно -->
+
+</body>
+</html>
