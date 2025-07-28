@@ -21,69 +21,42 @@
     font-size: 2.5em;
     color: #fff;
   }
-  /* Большой красивый блок с текстом */
-  .intro-block {
-    background: rgba(255,255,255,0.8);
-    padding: 40px 20px;
-    border-radius: 10px;
-    margin: 20px auto;
-    max-width: 900px;
-    text-align: center;
-  }
-  .intro-block h2 {
-    margin-top: 0;
-    font-size: 2em;
-    color: #333;
-  }
-  .intro-block p {
-    font-size: 1.2em;
-    line-height: 1.5;
-    margin: 20px 0;
-  }
-  /* Кнопка перехода к курсам */
-  .to-courses-btn {
-    display: inline-block;
-    padding: 12px 24px;
-    margin: 20px auto;
-    background-color: #ff7f50;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.2em;
-    cursor: pointer;
-    display: block;
-  }
-  /* Раздел с курсами, скрыт по умолчанию */
-  #coursesSection {
-    display: none;
-    padding: 20px;
-  }
-  #coursesSection h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  .courses {
+  /* Контейнер для двух блоков: слева и справа */
+  .content-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
+    margin: 20px auto;
+    max-width: 1200px;
   }
-  .course {
-    background: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    width: 300px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  /* Слева — почему сайт лучше */
+  .left-block {
+    flex: 1 1 45%;
+    min-width: 300px;
+    padding: 20px;
   }
-  .pay-btn {
-    display: inline-block;
-    padding: 12px 24px;
-    margin-top: 10px;
-    background-color: #4CAF50;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: bold;
+  /* Справа — текст "Обучение без границ" */
+  .right-block {
+    flex: 1 1 45%;
+    min-width: 300px;
+    padding: 20px;
+  }
+  /* Стиль для текста "Обучение без границ" */
+  .right-block h2 {
+    font-size: 2em;
+    margin-top: 0;
+    text-align: right;
+    color: #333;
+  }
+  /* Стиль для текста слева */
+  .left-block h3 {
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  .left-block p {
+    font-size: 1.2em;
+    line-height: 1.5;
   }
   /* Форма входа и регистрации */
   .auth-container {
@@ -105,7 +78,6 @@
     margin-top: 0;
     text-align: center;
     margin-bottom: 15px;
-    color: #333;
   }
   input {
     width: 100%;
@@ -114,7 +86,6 @@
     margin-bottom: 15px;
     border-radius: 8px;
     border: 1px solid #ccc;
-    font-size: 1em;
   }
   button {
     width: 100%;
@@ -124,7 +95,6 @@
     border: none;
     border-radius: 8px;
     font-size: 1.1em;
-    cursor: pointer;
   }
   button:hover {
     background-color: #45a049;
@@ -137,9 +107,16 @@
   <h1>Добро пожаловать! Обучающая платформа для всех</h1>
 </header>
 
-<!-- Большой блок с текстом -->
-<section class="intro-block">
-  <h2>Зачем нужен этот сайт?</h2>
-  <p>Обучение без гра
-</body>
-</html>
+<!-- Контейнер с двумя блоками: слева и справа -->
+<div class="content-container">
+  <!-- Слева — почему сайт лучше -->
+  <div class="left-block">
+    <h3>Почему выбирают наш сайт?</h3>
+    <p>Наш сайт объединяет лучших преподавателей со всего мира, предлагает уникальные курсы и помогает зарабатывать, делясь знаниями. Всё полностью онлайн, доступно из любой точки планеты и без границ.</p>
+    <p>Учитесь у профессионалов, создавайте свои курсы и зарабатывайте, делясь знаниями — всё просто и удобно.</p>
+  </div>
+  <!-- Справа — текст "Обучение без границ" -->
+  <div class="right-block">
+    <h2>Обучение без границ</h2>
+    <p>Учитесь у лучших преподавателей со всего мира, создавайте свои курсы и зарабатывайте, делясь знаниями. Всё онлайн и доступно из любой страны.</p>
+    <p>Создавайте свои курсы, учитесь у профессионалов и зарабатывайте, делясь знаниями.</p>
