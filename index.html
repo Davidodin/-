@@ -15,11 +15,11 @@
     background-color: rgba(0,0,0,0.3);
     padding: 30px 20px;
     text-align: center;
-    color: #fff;
   }
   header h1 {
     margin: 0;
     font-size: 2.5em;
+    color: #fff;
   }
   section {
     padding: 40px 20px;
@@ -36,7 +36,23 @@
     text-align: center;
     font-size: 1.2em;
     color: #fff;
+    line-height: 1.5;
   }
+  /* Блок с объединенным текстом */
+  .intro-block {
+    background: linear-gradient(to right, #74ebd5, #ACB6E5);
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 900px;
+    text-align: center;
+  }
+  .intro-block h2 {
+    margin-top: 0;
+    font-size: 2em;
+    color: #fff;
+  }
+  /* Форма регистрации */
   .auth-container {
     display: flex;
     flex-wrap: wrap;
@@ -81,6 +97,34 @@
   button:hover {
     background-color: #45a049;
   }
+  /* Раздел с курсами */
+  .courses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  .course {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  .course h3 {
+    margin-top: 0;
+  }
+  .pay-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+  }
 </style>
 </head>
 <body>
@@ -89,35 +133,7 @@
   <h1>Добро пожаловать! Обучающая платформа для всех</h1>
 </header>
 
-<section>
-  <h2>Зачем нужен этот сайт?</h2>
-  <p>Учитесь у лучших преподавателей со всего мира, создавайте свои курсы и зарабатывайте, делясь знаниями. Всё онлайн и доступно из любой страны.</p>
-</section>
-
-<section>
-  <h2 style="text-align:center;">Войти или зарегистрироваться</h2>
-  <div class="auth-container">
-    <!-- Вход -->
-    <div class="auth-box">
-      <h3>Вход</h3>
-      <form action="#" method="post">
-        <input type="email" placeholder="Email" required>
-        <input type="password" placeholder="Пароль" required>
-        <button type="submit">Войти</button>
-      </form>
-    </div>
-    <!-- Регистрация -->
-    <div class="auth-box">
-      <h3>Регистрация</h3>
-      <form action="#" method="post">
-        <input type="text" placeholder="Имя" required>
-        <input type="email" placeholder="Email" required>
-        <input type="password" placeholder="Пароль" required>
-        <button type="submit">Зарегистрироваться</button>
-      </form>
-    </div>
-  </div>
-</section>
-
-</body>
-</html>
+<!-- Объединенный блок с текстом -->
+<section class="intro-block">
+  <h2>Лучшие курсы и уроки со всего мира</h2>
+  <p>Учитесь у лучших преподавателей со всего мира, создавайте свои курсы и зарабатывайте, делясь знаниями. Всё онлайн и доступно из любой страны.</
