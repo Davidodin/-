@@ -27,19 +27,22 @@
     margin-top: 0;
   }
   .courses {
-    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
   }
   .course {
     background: #fff;
     padding: 15px;
-    margin-bottom: 20px;
     border-radius: 8px;
+    width: 300px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
   }
   .course h3 {
     margin-top: 0;
   }
-  .pay-button {
+  .pay-btn {
     display: inline-block;
     padding: 12px 24px;
     margin-top: 10px;
@@ -58,26 +61,34 @@
 </header>
 
 <section>
-  <h1>Выберите курс и оплатите его</h1>
-  
+  <h2 style="text-align:center;">Выберите курс и оплатите</h2>
   <div class="courses">
     <div class="course">
       <h3>Курс по программированию</h3>
       <p>Описание курса по программированию...</p>
-      <a class="pay-button" href="https://money.yandex.ru/to/4100118957997549?amount=100&label=Курс_по_программированию" target="_blank">Оплатить курс по программированию</a>
+      <a class="pay-btn" href="https://money.yandex.ru/to/4100118957997549?amount=100&label=Курс_по_программированию" target="_blank">Оплатить за 100₽</a>
     </div>
     <div class="course">
       <h3>Курс по дизайну</h3>
       <p>Описание курса по дизайну...</p>
-      <a class="pay-button" href="https://money.yandex.ru/to/4100118957997549?amount=150&label=Курс_по_дизайну" target="_blank">Оплатить курс по дизайну</a>
+      <a class="pay-btn" href="https://money.yandex.ru/to/4100118957997549?amount=150&label=Курс_по_дизайну" target="_blank">Оплатить за 150₽</a>
     </div>
     <div class="course">
       <h3>Курс по английскому</h3>
       <p>Описание курса по английскому языку...</p>
-      <a class="pay-button" href="https://money.yandex.ru/to/4100118957997549?amount=120&label=Курс_по_английскому" target="_blank">Оплатить курс по английскому</a>
+      <a class="pay-btn" href="https://money.yandex.ru/to/4100118957997549?amount=120&label=Курс_по_английскому" target="_blank">Оплатить за 120₽</a>
     </div>
   </div>
 </section>
 
+<!-- Регистрация -->
+<h2 style="text-align:center; margin-top:40px;">Регистрация</h2>
+<form action="#" method="post" style="max-width:400px; margin:auto; background:#fff; padding:20px; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
+  <label for="name">Имя:</label><br>
+  <input type="text" id="name" name="name" required style="width:100%; padding:8px; margin-top:4px; margin-bottom:10px; border-radius:4px; border:1px solid #ccc;"><br>
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required style="width:100%; padding:8px; margin-top:4px; margin-bottom:10px; border-radius:4px; border:1px solid #ccc;"><br>
+  <label for="password">Пароль:</label><br>
+  <input type="password" id="password" name="password" required style="width:100%; padding:8px
 </body>
 </html>
