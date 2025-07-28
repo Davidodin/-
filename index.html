@@ -80,6 +80,7 @@
     border-radius: 8px;
     font-size: 1.1em;
     cursor: pointer;
+    transition: background 0.3s;
   }
   button:hover {
     background-color: #45a049;
@@ -92,14 +93,14 @@
   <h1>Добро пожаловать! Обучающая платформа для всех</h1>
 </header>
 
-<!-- Новый лаконичный блок с текстом -->
+<!-- Большой красивый блок с вашим текстом -->
 <section class="intro-block">
   <h2>Зачем нужен этот сайт?</h2>
   <p>Учитесь у лучших преподавателей со всего мира, создавайте свои курсы и зарабатывайте, делясь знаниями. Всё онлайн и доступно из любой страны.</p>
   <p>Создавайте свои курсы, учитесь у профессионалов и зарабатывайте, делясь знаниями.</p>
 </section>
 
-<!-- Вход и регистрация -->
+<!-- Описание и формы входа/регистрации -->
 <section>
   <h2 style="text-align:center;">Войти или зарегистрироваться</h2>
   <div class="auth-container">
@@ -114,3 +115,9 @@
     </div>
     <!-- Регистрация -->
     <div class="auth-box">
+      <h3>Регистрация</h3>
+      <form action="#" method="post">
+        <input type="text" placeholder="Имя" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Пароль" required>
+        <button type="submit">Зарегистрироваться</button>
