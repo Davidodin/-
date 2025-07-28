@@ -47,18 +47,33 @@
     margin-top: 0;
     margin-bottom: 15px;
   }
-  /* Тексты внутри блоков — одинакового размера */
+  /* Тексты внутри блоков */
   .left-block p, .right-block p {
     font-size: 1.2em;
     line-height: 1.5;
   }
-  /* Форма входа и регистрации */
+  /* Кнопка "Войти или зарегистрироваться" */
+  .auth-toggle-btn {
+    display: block;
+    margin: 30px auto;
+    padding: 12px 24px;
+    background-color: #ff7f50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  /* Раздел с формами входа/регистрации */
+  #auth-section {
+    display: none; /* по умолчанию скрыт */
+    padding: 20px;
+  }
   .auth-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
-    margin-top: 40px;
   }
   .auth-box {
     background: #fff;
@@ -111,15 +126,4 @@
   <!-- Справа — почему выбирают сайт -->
   <div class="right-block">
     <h3>Почему выбирают наш сайт?</h3>
-    <p>Это уникальная платформа, объединяющая лучших преподавателей со всего мира. Здесь вы найдете разнообразие курсов по самым востребованным направлениям, сможете создавать собственные программы и зарабатывать, делясь знаниями. Всё это — в удобном онлайн-формате, доступном из любой точки планеты.</p>
-  </div>
-</div>
-
-<!-- Ниже формы входа и регистрации -->
-<section>
-  <h2 style="text-align:center;">Войти или зарегистрироваться</h2>
-  <div class="auth-container">
-    <!-- Вход -->
-    <div class="auth-box">
-      <h3>Вход</h3>
-      <form action="#"
+    <p>Это уникальная платформа, объединяющая лучших преподавателей со всего мира. Здесь вы найдете разнообразие курсов
