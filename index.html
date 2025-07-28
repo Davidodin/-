@@ -21,42 +21,87 @@
     font-size: 2.5em;
     color: #fff;
   }
-  /* Контейнер для двух блоков: слева и справа */
-  .content-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  /* Кнопка "О сайте" */
+  .info-btn {
+    display: block;
     margin: 20px auto;
-    max-width: 1200px;
+    padding: 12px 24px;
+    background-color: #ff7f50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
   }
-  /* Слева — почему сайт лучше */
-  .left-block {
-    flex: 1 1 45%;
-    min-width: 300px;
-    padding: 20px;
+  /* Модальное окно */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
   }
-  /* Справа — текст "Обучение без границ" */
-  .right-block {
-    flex: 1 1 45%;
-    min-width: 300px;
-    padding: 20px;
+  .modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 700px;
+    width: 90%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    position: relative;
   }
-  /* Стиль для текста "Обучение без границ" */
-  .right-block h2 {
-    font-size: 2em;
-    margin-top: 0;
-    text-align: right;
+  .close-btn {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 1.5em;
+    cursor: pointer;
     color: #333;
   }
-  /* Стиль для текста слева */
-  .left-block h3 {
-    font-size: 1.8em;
-    margin-top: 0;
-    margin-bottom: 15px;
+  /* Тексты внутри окна */
+  .popup-text {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.5;
   }
-  .left-block p {
+  /* Остальной стиль — как раньше */
+  /* ... (оставьте стили из предыдущего кода) ... */
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0; padding: 0;
+    background: linear-gradient(to right, #74ebd5, #ACB6E5);
+    color: #333;
+  }
+  header {
+    background-color: rgba(0,0,0,0.3);
+    padding: 30px 20px;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #fff;
+  }
+  /* Большой красивый блок с текстом */
+  .intro-block {
+    background: rgba(255,255,255,0.8);
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 900px;
+    text-align: center;
+  }
+  .intro-block h2 {
+    margin-top: 0;
+    font-size: 2em;
+    color: #333;
+  }
+  .intro-block p {
     font-size: 1.2em;
     line-height: 1.5;
+    margin: 20px 0;
   }
   /* Форма входа и регистрации */
   .auth-container {
@@ -78,45 +123,3 @@
     margin-top: 0;
     text-align: center;
     margin-bottom: 15px;
-  }
-  input {
-    width: 100%;
-    padding: 10px;
-    margin-top: 8px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-  }
-  button {
-    width: 100%;
-    padding: 12px;
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.1em;
-  }
-  button:hover {
-    background-color: #45a049;
-  }
-</style>
-</head>
-<body>
-
-<header>
-  <h1>Добро пожаловать! Обучающая платформа для всех</h1>
-</header>
-
-<!-- Контейнер с двумя блоками: слева и справа -->
-<div class="content-container">
-  <!-- Слева — почему сайт лучше -->
-  <div class="left-block">
-    <h3>Почему выбирают наш сайт?</h3>
-    <p>Наш сайт объединяет лучших преподавателей со всего мира, предлагает уникальные курсы и помогает зарабатывать, делясь знаниями. Всё полностью онлайн, доступно из любой точки планеты и без границ.</p>
-    <p>Учитесь у профессионалов, создавайте свои курсы и зарабатывайте, делясь знаниями — всё просто и удобно.</p>
-  </div>
-  <!-- Справа — текст "Обучение без границ" -->
-  <div class="right-block">
-    <h2>Обучение без границ</h2>
-    <p>Учитесь у лучших преподавателей со всего мира, создавайте свои курсы и зарабатывайте, делясь знаниями. Всё онлайн и доступно из любой страны.</p>
-    <p>Создавайте свои курсы, учитесь у профессионалов и зарабатывайте, делясь знаниями.</p>
