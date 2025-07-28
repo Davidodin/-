@@ -21,39 +21,21 @@
     font-size: 2.5em;
     color: #fff;
   }
-  /* Кнопка "Подробнее" */
-  .more-btn {
-    display: block;
-    margin: 20px auto;
-    padding: 12px 24px;
-    background-color: #ff7f50;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.2em;
-    cursor: pointer;
-  }
-  /* Блок с текстом, скрыт по умолчанию */
-  .info-block {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease;
+  /* Большой блок с текстом */
+  .intro-block {
     background: rgba(255,255,255,0.8);
-    padding: 0 20px;
-    margin: 0 auto;
+    padding: 40px 20px;
     border-radius: 10px;
+    margin: 20px auto;
     max-width: 900px;
-  }
-  .info-block.show {
-    max-height: 500px; /* достаточно для текста */
-    padding: 20px;
-  }
-  .info-block h2 {
-    margin-top: 0;
-    font-size: 2em;
     text-align: center;
   }
-  .info-block p {
+  .intro-block h2 {
+    margin-top: 0;
+    font-size: 2em;
+    color: #333;
+  }
+  .intro-block p {
     font-size: 1.2em;
     line-height: 1.5;
     margin: 20px 0;
@@ -107,11 +89,31 @@
   <h1>Добро пожаловать! Обучающая платформа для всех</h1>
 </header>
 
-<!-- Кнопка "Подробнее" -->
-<button class="more-btn" onclick="toggleInfo()">Подробнее о сайте</button>
+<!-- Большой блок с текстом -->
+<section class="intro-block">
+  <h2>Зачем нужен этот сайт?</h2>
+  <p>Обучение без границ — учитесь у ведущих экспертов со всего мира, создавайте уникальные курсы и зарабатывайте, делясь своими знаниями. Всё это — онлайн, в любое время и из любой точки планеты.</p>
+  <p>Создавайте свои курсы, учитесь у профессионалов и зарабатывайте, делясь знаниями.</p>
+</section>
 
-<!-- Блок с объединенным текстом, скрыт по умолчанию -->
-<div class="info-block" id="infoBlock">
-  <h2>Почему выбирают наш сайт?</h2>
-  <p>Это уникальная платформа, объединяющая лучших преподавателей со всего мира. Здесь вы найдете разнообразие курсов по самым востребованным направлениям, сможете создавать собственные программы и зарабатывать, делясь знаниями. Всё это — в удобном онлайн-формате, доступном из любой точки планеты.</p>
-  <p>Обучение без границ — учитесь у ведущих экспертов со всего мира, создавайте свои курсы и зарабатывайте, делясь знания
+<!-- Описание и формы входа/регистрации -->
+<section>
+  <h2 style="text-align:center;">Войти или зарегистрироваться</h2>
+  <div class="auth-container">
+    <!-- Вход -->
+    <div class="auth-box">
+      <h3>Вход</h3>
+      <form action="#" method="post">
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Пароль" required>
+        <button type="submit">Войти</button>
+      </form>
+    </div>
+    <!-- Регистрация -->
+    <div class="auth-box">
+      <h3>Регистрация</h3>
+      <form action="#" method="post">
+        <input type="text" placeholder="Имя" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Пароль" required>
+        <button type="submit">Зар
