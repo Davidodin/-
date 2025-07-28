@@ -3,92 +3,64 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Обучающая платформа для всех</title>
+<title>Обучающая платформа</title>
 <style>
   body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    margin: 0; padding: 0;
+    background-color: #f4f4f4; color: #333;
   }
   header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px;
-    text-align: center;
+    background-color: #4CAF50; color: white; padding: 20px; text-align: center;
   }
   section {
-    padding: 20px;
-    max-width: 1000px;
-    margin: auto;
+    padding: 20px; max-width: 800px; margin: auto;
   }
   h1 {
     margin-top: 0;
   }
-  .courses {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+  .auth-form {
+    background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 400px; margin: auto;
   }
-  .course {
-    background: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    width: 300px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  input {
+    width: 100%; padding: 8px; margin-top: 4px; margin-bottom: 10px; border-radius: 4px; border: 1px solid #ccc;
   }
-  .course h3 {
-    margin-top: 0;
-  }
-  .pay-btn {
-    display: inline-block;
-    padding: 12px 24px;
-    margin-top: 10px;
-    background-color: #4CAF50;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: bold;
+  button {
+    width: 100%; padding: 10px; background: #4CAF50; color: white; border: none; border-radius: 4px; font-size: 16px;
   }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Обучающая платформа для всех — учитесь всему онлайн!</h1>
+  <h1>Добро пожаловать! Обучающая платформа для всех</h1>
 </header>
 
 <section>
-  <h2 style="text-align:center;">Выберите курс и оплатите</h2>
-  <div class="courses">
-    <div class="course">
-      <h3>Курс по программированию</h3>
-      <p>Описание курса по программированию...</p>
-      <a class="pay-btn" href="https://money.yandex.ru/to/4100118957997549?amount=100&label=Курс_по_программированию" target="_blank">Оплатить за 100₽</a>
-    </div>
-    <div class="course">
-      <h3>Курс по дизайну</h3>
-      <p>Описание курса по дизайну...</p>
-      <a class="pay-btn" href="https://money.yandex.ru/to/4100118957997549?amount=150&label=Курс_по_дизайну" target="_blank">Оплатить за 150₽</a>
-    </div>
-    <div class="course">
-      <h3>Курс по английскому</h3>
-      <p>Описание курса по английскому языку...</p>
-      <a class="pay-btn" href="https://money.yandex.ru/to/4100118957997549?amount=120&label=Курс_по_английскому" target="_blank">Оплатить за 120₽</a>
-    </div>
+  <h2>Зачем нужен этот сайт?</h2>
+  <p>Здесь вы можете учиться у лучших преподавателей со всего мира, создавать свои курсы и зарабатывать, делясь знаниями. Всё онлайн и доступно из любой страны.</p>
+</section>
+
+<section>
+  <h2 style="text-align:center;">Войти или зарегистрироваться</h2>
+  <div class="auth-form">
+    <h3>Вход</h3>
+    <form action="#" method="post">
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Пароль" required>
+      <button type="submit">Войти</button>
+    </form>
+    <hr>
+    <h3>Регистрация</h3>
+    <form action="#" method="post">
+      <input type="text" placeholder="Имя" required>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Пароль" required>
+      <button type="submit">Зарегистрироваться</button>
+    </form>
   </div>
 </section>
 
-<!-- Регистрация -->
-<h2 style="text-align:center; margin-top:40px;">Регистрация</h2>
-<form action="#" method="post" style="max-width:400px; margin:auto; background:#fff; padding:20px; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
-  <label for="name">Имя:</label><br>
-  <input type="text" id="name" name="name" required style="width:100%; padding:8px; margin-top:4px; margin-bottom:10px; border-radius:4px; border:1px solid #ccc;"><br>
-  <label for="email">Email:</label><br>
-  <input type="email" id="email" name="email" required style="width:100%; padding:8px; margin-top:4px; margin-bottom:10px; border-radius:4px; border:1px solid #ccc;"><br>
-  <label for="password">Пароль:</label><br>
-  <input type="password" id="password" name="password" required style="width:100%; padding:8px
 </body>
 </html>
