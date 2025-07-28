@@ -21,7 +21,7 @@
     font-size: 2.5em;
     color: #fff;
   }
-  /* Большой красивый блок с новым текстом */
+  /* Большой красивый блок с текстом */
   .intro-block {
     background: rgba(255,255,255,0.8);
     padding: 40px 20px;
@@ -39,6 +39,51 @@
     font-size: 1.2em;
     line-height: 1.5;
     margin: 20px 0;
+  }
+  /* Кнопка перехода к курсам */
+  .to-courses-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 20px auto;
+    background-color: #ff7f50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+    display: block;
+  }
+  /* Раздел с курсами, скрыт по умолчанию */
+  #coursesSection {
+    display: none;
+    padding: 20px;
+  }
+  #coursesSection h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .courses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  .course {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  .pay-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
   }
   /* Форма входа и регистрации */
   .auth-container {
@@ -92,37 +137,9 @@
   <h1>Добро пожаловать! Обучающая платформа для всех</h1>
 </header>
 
-<!-- Новый красивый блок с вашим текстом -->
+<!-- Большой блок с текстом -->
 <section class="intro-block">
   <h2>Зачем нужен этот сайт?</h2>
-  <p>Обучение без границ — учитесь у ведущих экспертов со всего мира, создавайте уникальные курсы и зарабатывайте, делясь своими знаниями. Всё это — онлайн, в любое время и из любой точки планеты.</p>
-</section>
-
-<!-- Описание и формы входа/регистрации -->
-<section>
-  <h2 style="text-align:center;">Войти или зарегистрироваться</h2>
-  <div class="auth-container">
-    <!-- Вход -->
-    <div class="auth-box">
-      <h3>Вход</h3>
-      <form action="#" method="post">
-        <input type="email" placeholder="Email" required>
-        <input type="password" placeholder="Пароль" required>
-        <button type="submit">Войти</button>
-      </form>
-    </div>
-    <!-- Регистрация -->
-    <div class="auth-box">
-      <h3>Регистрация</h3>
-      <form action="#" method="post">
-        <input type="text" placeholder="Имя" required>
-        <input type="email" placeholder="Email" required>
-        <input type="password" placeholder="Пароль" required>
-        <button type="submit">Зарегистрироваться</button>
-      </form>
-    </div>
-  </div>
-</section>
-
+  <p>Обучение без гра
 </body>
 </html>
