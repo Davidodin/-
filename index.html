@@ -21,7 +21,7 @@
     font-size: 2.5em;
     color: #fff;
   }
-  /* Большой красивый блок с текстом */
+  /* Большой блок с текстом */
   .intro-block {
     background: rgba(255,255,255,0.8);
     padding: 40px 20px;
@@ -46,7 +46,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
-    margin-top: 40px;
+    margin-top: 30px;
   }
   .auth-box {
     background: #fff;
@@ -85,39 +85,48 @@
   button:hover {
     background-color: #45a049;
   }
-</style>
-</head>
-<body>
-
-<header>
-  <h1>Добро пожаловать! Обучающая платформа для всех</h1>
-</header>
-
-<!-- Большой красивый блок с вашим текстом -->
-<section class="intro-block">
-  <h2>Зачем нужен этот сайт?</h2>
-  <p>Учитесь у лучших преподавателей со всего мира, создавайте свои курсы и зарабатывайте, делясь знаниями. Всё онлайн и доступно из любой страны.</p>
-  <p>Создавайте свои курсы, учитесь у профессионалов и зарабатывайте, делясь знаниями.</p>
-</section>
-
-<!-- Описание и формы входа/регистрации -->
-<section>
-  <h2 style="text-align:center;">Войти или зарегистрироваться</h2>
-  <div class="auth-container">
-    <!-- Вход -->
-    <div class="auth-box">
-      <h3>Вход</h3>
-      <form action="#" method="post">
-        <input type="email" placeholder="Email" required>
-        <input type="password" placeholder="Пароль" required>
-        <button type="submit">Войти</button>
-      </form>
-    </div>
-    <!-- Регистрация -->
-    <div class="auth-box">
-      <h3>Регистрация</h3>
-      <form action="#" method="post">
-        <input type="text" placeholder="Имя" required>
-        <input type="email" placeholder="Email" required>
-        <input type="password" placeholder="Пароль" required>
-        <button type="submit">Зарегистрироваться</button>
+  /* Страница курсов */
+  .courses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  .course {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  .course h3 {
+    margin-top: 0;
+  }
+  .pay-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  /* Кнопки навигации */
+  .nav-buttons {
+    text-align: center;
+    margin: 30px 0;
+  }
+  .nav-buttons a {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  .nav-buttons a:hover {
+    background-color: #45a049;
