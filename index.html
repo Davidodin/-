@@ -21,46 +21,46 @@
     font-size: 2.5em;
     color: #fff;
   }
-  /* Большой блок с текстом */
-  .intro-block {
-    background: rgba(255,255,255,0.8);
-    padding: 40px 20px;
-    border-radius: 10px;
-    margin: 20px auto;
-    max-width: 900px;
+  /* Навигация между разделами */
+  .nav {
     text-align: center;
-  }
-  .intro-block h2 {
-    margin-top: 0;
-    font-size: 2em;
-    color: #333;
-  }
-  .intro-block p {
-    font-size: 1.2em;
-    line-height: 1.5;
     margin: 20px 0;
   }
-  /* Форма входа и регистрации */
-  .auth-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 30px;
+  .nav button {
+    padding: 12px 20px;
+    margin: 0 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
   }
-  .auth-box {
+  .nav button:hover {
+    background-color: #45a049;
+  }
+  /* Разделы */
+  .section {
+    display: none;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+  }
+  .section.active {
+    display: block;
+  }
+  /* Стиль для формы регистрации/входа */
+  .auth-form {
     background: #fff;
-    padding: 30px;
+    padding: 20px;
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    flex: 1 1 300px;
-    max-width: 350px;
+    max-width: 400px;
+    margin: auto;
   }
-  .auth-box h3 {
-    margin-top: 0;
+  .auth-form h3 {
     text-align: center;
-    margin-bottom: 15px;
-    color: #333;
+    margin-top: 0;
   }
   input {
     width: 100%;
@@ -69,7 +69,6 @@
     margin-bottom: 15px;
     border-radius: 8px;
     border: 1px solid #ccc;
-    font-size: 1em;
   }
   button {
     width: 100%;
@@ -80,18 +79,16 @@
     border-radius: 8px;
     font-size: 1.1em;
     cursor: pointer;
-    transition: background 0.3s;
   }
   button:hover {
     background-color: #45a049;
   }
-  /* Страница курсов */
+  /* Курсы */
   .courses {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    margin-top: 40px;
   }
   .course {
     background: #fff;
@@ -99,9 +96,6 @@
     border-radius: 8px;
     width: 300px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-  .course h3 {
-    margin-top: 0;
   }
   .pay-btn {
     display: inline-block;
@@ -118,11 +112,17 @@
 <body>
 
 <header>
-  <h1>Добро пожаловать! Обучающая платформа для всех</h1>
+  <h1>Обучающая платформа для всех</h1>
 </header>
 
-<!-- Большой блок с текстом -->
-<section class="intro-block">
-  <h2>Зачем нужен этот сайт?</h2>
-  <p>Учитесь у лучших преподавателей со всего мира, создавайте свои курсы и зарабатывайте, делясь знаниями. Всё онлайн и доступно из любой страны.</p>
-  <p>Создавайте свои курсы, учитесь у профессионалов и зарабатывайте, делясь знания
+<!-- Навигация -->
+<div class="nav">
+  <button onclick="showSection('main')">Главная</button>
+  <button onclick="showSection('auth')">Вход/Регистрация</button>
+  <button onclick="showSection('courses')">Курсы</button>
+</div>
+
+<!-- Главная страница -->
+<div id="main" class="section active">
+  <h2 style="text-align:center;">Зачем нужен этот сайт?</h2>
+  <p style="text-align:center;">Учитесь у лучших
