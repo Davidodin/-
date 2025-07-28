@@ -21,26 +21,9 @@
     font-size: 2.5em;
     color: #fff;
   }
-  section {
-    padding: 40px 20px;
-    max-width: 900px;
-    margin: auto;
-  }
-  h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2em;
-    color: #fff;
-  }
-  p {
-    text-align: center;
-    font-size: 1.2em;
-    color: #fff;
-    line-height: 1.5;
-  }
-  /* Блок с объединенным текстом */
+  /* Большой красивый блок с текстом */
   .intro-block {
-    background: linear-gradient(to right, #74ebd5, #ACB6E5);
+    background: rgba(255,255,255,0.8);
     padding: 40px 20px;
     border-radius: 10px;
     margin: 20px auto;
@@ -50,18 +33,23 @@
   .intro-block h2 {
     margin-top: 0;
     font-size: 2em;
-    color: #fff;
+    color: #333;
   }
-  /* Форма регистрации */
+  .intro-block p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin: 20px 0;
+  }
+  /* Форма входа и регистрации */
   .auth-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
-    margin-top: 30px;
+    margin-top: 40px;
   }
   .auth-box {
-    background: rgba(255,255,255,0.9);
+    background: #fff;
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
@@ -97,34 +85,6 @@
   button:hover {
     background-color: #45a049;
   }
-  /* Раздел с курсами */
-  .courses {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 40px;
-  }
-  .course {
-    background: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    width: 300px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-  .course h3 {
-    margin-top: 0;
-  }
-  .pay-btn {
-    display: inline-block;
-    padding: 12px 24px;
-    margin-top: 10px;
-    background-color: #4CAF50;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: bold;
-  }
 </style>
 </head>
 <body>
@@ -133,7 +93,31 @@
   <h1>Добро пожаловать! Обучающая платформа для всех</h1>
 </header>
 
-<!-- Объединенный блок с текстом -->
+<!-- Большой красивый блок с вашим текстом -->
 <section class="intro-block">
-  <h2>Лучшие курсы и уроки со всего мира</h2>
-  <p>Учитесь у лучших преподавателей со всего мира, создавайте свои курсы и зарабатывайте, делясь знаниями. Всё онлайн и доступно из любой страны.</
+  <h2>Зачем нужен этот сайт?</h2>
+  <p>Учитесь у лучших преподавателей со всего мира, создавайте свои курсы и зарабатывайте, делясь знаниями. Всё онлайн и доступно из любой страны.</p>
+  <p>Создавайте свои курсы, учитесь у профессионалов и зарабатывайте, делясь знаниями.</p>
+</section>
+
+<!-- Описание и формы входа/регистрации -->
+<section>
+  <h2 style="text-align:center;">Войти или зарегистрироваться</h2>
+  <div class="auth-container">
+    <!-- Вход -->
+    <div class="auth-box">
+      <h3>Вход</h3>
+      <form action="#" method="post">
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Пароль" required>
+        <button type="submit">Войти</button>
+      </form>
+    </div>
+    <!-- Регистрация -->
+    <div class="auth-box">
+      <h3>Регистрация</h3>
+      <form action="#" method="post">
+        <input type="text" placeholder="Имя" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Пароль" required>
+        <button type="submit">Зарегистрироваться</button>
