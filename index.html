@@ -21,24 +21,37 @@
     font-size: 2.5em;
     color: #fff;
   }
-  /* Большой блок с текстом */
-  .intro-block {
-    background: rgba(255,255,255,0.8);
-    padding: 40px 20px;
-    border-radius: 10px;
+  /* Контейнер для двух блоков: слева и справа */
+  .content-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 20px auto;
-    max-width: 900px;
-    text-align: center;
+    max-width: 1200px;
   }
-  .intro-block h2 {
+  /* Левый блок — преимущества */
+  .left-block {
+    flex: 1 1 45%;
+    min-width: 300px;
+    padding: 20px;
+  }
+  /* Правый блок — почему выбирают сайт */
+  .right-block {
+    flex: 1 1 45%;
+    min-width: 300px;
+    padding: 20px;
+  }
+  /* Заголовки блоков */
+  .left-block h3, .right-block h3 {
+    font-size: 1.8em;
     margin-top: 0;
-    font-size: 2em;
+    margin-bottom: 15px;
     color: #333;
   }
-  .intro-block p {
+  /* Тексты внутри блоков */
+  .left-block p, .right-block p {
     font-size: 1.2em;
     line-height: 1.5;
-    margin: 20px 0;
   }
   /* Форма входа и регистрации */
   .auth-container {
@@ -89,31 +102,21 @@
   <h1>Добро пожаловать! Обучающая платформа для всех</h1>
 </header>
 
-<!-- Большой блок с текстом -->
-<section class="intro-block">
-  <h2>Зачем нужен этот сайт?</h2>
-  <p>Обучение без границ — учитесь у ведущих экспертов со всего мира, создавайте уникальные курсы и зарабатывайте, делясь своими знаниями. Всё это — онлайн, в любое время и из любой точки планеты.</p>
-  <p>Создавайте свои курсы, учитесь у профессионалов и зарабатывайте, делясь знаниями.</p>
-</section>
+<!-- Контейнер с двумя блоками: слева и справа -->
+<div class="content-container">
+  <!-- Слева — преимущества -->
+  <div class="left-block">
+    <h3>На нашем сайте вы можете учиться у профессионалов, создавать свои курсы, делиться опытом и зарабатывать, расширяя свои горизонты.</h3>
+    <p>Мы делаем обучение доступным, интересным и прибыльным для каждого!</p>
+  </div>
+  <!-- Справа — почему выбирают сайт -->
+  <div class="right-block">
+    <h3>Почему выбирают наш сайт?</h3>
+    <p>Это уникальная платформа, объединяющая лучших преподавателей со всего мира. Здесь вы найдете разнообразие курсов по самым востребованным направлениям, сможете создавать собственные программы и зарабатывать, делясь знаниями. Всё это — в удобном онлайн-формате, доступном из любой точки планеты.</p>
+  </div>
+</div>
 
-<!-- Описание и формы входа/регистрации -->
-<section>
-  <h2 style="text-align:center;">Войти или зарегистрироваться</h2>
-  <div class="auth-container">
-    <!-- Вход -->
-    <div class="auth-box">
-      <h3>Вход</h3>
-      <form action="#" method="post">
-        <input type="email" placeholder="Email" required>
-        <input type="password" placeholder="Пароль" required>
-        <button type="submit">Войти</button>
-      </form>
-    </div>
-    <!-- Регистрация -->
-    <div class="auth-box">
-      <h3>Регистрация</h3>
-      <form action="#" method="post">
-        <input type="text" placeholder="Имя" required>
-        <input type="email" placeholder="Email" required>
-        <input type="password" placeholder="Пароль" required>
-        <button type="submit">Зар
+<!-- Остальной ваш код (форма входа/регистрации и т.п.) — вставьте сюда, если нужно -->
+
+</body>
+</html>
