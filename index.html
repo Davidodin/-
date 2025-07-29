@@ -36,6 +36,8 @@
     background: rgba(255,255,255,0.2);
     z-index: -1;
   }
+
+  /* Остальные стили */
   header {
     background-color: rgba(0,0,0,0.3);
     padding: 30px 20px;
@@ -46,7 +48,6 @@
     font-size: 2.5em;
     color: #fff;
   }
-  /* Контейнер для двух блоков: слева и справа */
   .content-container {
     display: flex;
     flex-wrap: wrap;
@@ -54,31 +55,27 @@
     margin: 20px auto;
     max-width: 1200px;
   }
-  /* Левый блок — преимущества */
-  .left-block {
+  .left-block, .right-block {
     flex: 1 1 45%;
     min-width: 300px;
     padding: 20px;
   }
-  /* Правый блок — почему выбирают сайт */
-  .right-block {
-    flex: 1 1 45%;
-    min-width: 300px;
-    padding: 20px;
-  }
-  /* Заголовки блоков */
-  .left-block h3, .right-block h3 {
+  h3 {
     font-size: 1.8em;
     margin-top: 0;
     margin-bottom: 15px;
-    color: #333;
+    color: #fff; /* делаем заголовки белыми */
   }
-  /* Тексты внутри блоков */
-  .left-block p, .right-block p {
+  p {
     font-size: 1.2em;
     line-height: 1.5;
   }
-  /* Форма входа и регистрации */
+  /* Сделать текст белым и добавить внутренние отступы для блоков */
+  .left-block, .right-block {
+    color: #fff; /* белый текст */
+    padding: 20px; /* внутренние отступы */
+  }
+  /* Стиль для формы входа и регистрации */
   .auth-container {
     display: flex;
     flex-wrap: wrap;
