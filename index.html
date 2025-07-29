@@ -20,12 +20,11 @@
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background-image: url('images/background.jpg'); /* путь к вашему изображению */
+    background-image: url('https://sun9-59.userapi.com/s/v1/if2/aCBHfG1IHJFI7VHV-zXu_6YRXb1LVngbLk-74Fa7XXJC_G_DWL7ufSx4UVmngWv7fdTMOxDLFNQ0ebLxQluV31M_.jpg?quality=95&as=32x18,48x27,72x41,108x62,160x91,240x137,360x206,480x274,540x309,640x366,720x411,1080x617,1280x731,1344x768&from=bu&cs=1344x0');
     background-size: cover;
     background-position: center;
-    /* Уберите или закомментируйте строку с blur, чтобы было четко */
-    /* filter: blur(8px); */
-    z-index: -2; /* чтобы был позади всего */
+    /* filter: blur(8px);  // уберите или закомментируйте, если не хотите размытия */
+    z-index: -2;
   }
 
   /* Полупрозрачный слой поверх изображения, чтобы оно не мешало */
@@ -34,9 +33,11 @@
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: rgba(255,255,255,0.2); /* мягкий белый слой */
-    z-index: -1; /* поверх изображения, но ниже контента */
+    background: rgba(255,255,255,0.2);
+    z-index: -1;
   }
+
+  /* Остальные стили */
   header {
     background-color: rgba(0,0,0,0.3);
     padding: 30px 20px;
