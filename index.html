@@ -5,12 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Обучающая платформа</title>
 <style>
+  /* Все ваши стили, включая фон */
   body {
     font-family: 'Arial', sans-serif;
     margin: 0; padding: 0;
-    background: linear-gradient(to right, #74ebd5, #ACB6E5);
-    color: #333;
+    position: relative;
+    overflow: hidden;
   }
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    z-index: -1;
+  }
+  /* Остальные стили */
   header {
     background-color: rgba(0,0,0,0.3);
     padding: 30px 20px;
@@ -21,7 +34,6 @@
     font-size: 2.5em;
     color: #fff;
   }
-  /* Контейнер для двух блоков: слева и справа */
   .content-container {
     display: flex;
     flex-wrap: wrap;
@@ -29,31 +41,21 @@
     margin: 20px auto;
     max-width: 1200px;
   }
-  /* Левый блок — преимущества */
-  .left-block {
+  .left-block, .right-block {
     flex: 1 1 45%;
     min-width: 300px;
     padding: 20px;
   }
-  /* Правый блок — почему выбирают сайт */
-  .right-block {
-    flex: 1 1 45%;
-    min-width: 300px;
-    padding: 20px;
-  }
-  /* Заголовки блоков */
-  .left-block h3, .right-block h3 {
+  h3 {
     font-size: 1.8em;
     margin-top: 0;
     margin-bottom: 15px;
     color: #333;
   }
-  /* Тексты внутри блоков */
-  .left-block p, .right-block p {
+  p {
     font-size: 1.2em;
     line-height: 1.5;
   }
-  /* Форма входа и регистрации */
   .auth-container {
     display: flex;
     flex-wrap: wrap;
@@ -68,11 +70,6 @@
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     flex: 1 1 300px;
     max-width: 350px;
-  }
-  .auth-box h3 {
-    margin-top: 0;
-    text-align: center;
-    margin-bottom: 15px;
   }
   input {
     width: 100%;
@@ -102,65 +99,22 @@
   <h1>Добро пожаловать! Обучающая платформа для всех</h1>
 </header>
 
-<!-- Контейнер с двумя блоками: слева и справа -->
 <div class="content-container">
-  <!-- Слева — преимущества -->
   <div class="left-block">
     <h3>На нашем сайте вы можете учиться у профессионалов, создавать свои курсы, делиться опытом и зарабатывать, расширяя свои горизонты.</h3>
     <p>Мы делаем обучение доступным, интересным и прибыльным для каждого!</p>
   </div>
-  <!-- Справа — почему выбирают сайт -->
   <div class="right-block">
     <h3>Почему выбирают наш сайт?</h3>
     <p>Это уникальная платформа, объединяющая лучших преподавателей со всего мира. Здесь вы найдете разнообразие курсов по самым востребованным направлениям, сможете создавать собственные программы и зарабатывать, делясь знаниями. Всё это — в удобном онлайн-формате, доступном из любой точки планеты.</p>
   </div>
 </div>
 
-<!-- Остальной ваш код (форма входа/регистрации и т.п.) — вставьте сюда, если нужно -->
-
-</body><!-- Формы входа и регистрации внизу -->
+<!-- Вставьте сюда формы перед закрывающим тегом </body> -->
 <div class="auth-container">
   <!-- Вход -->
   <div class="auth-box">
     <h3>Войти</h3>
     <form action="/login" method="POST">
       <label for="login-email">Email:</label>
-      <input type="email" id="login-email" name="email" required />
-      <label for="login-password">Пароль:</label>
-      <input type="password" id="login-password" name="password" required />
-      <button type="submit">Войти</button>
-    </form>
-  </div>
-  <!-- Регистрация -->
-  <div class="auth-box">
-    <h3>Регистрация</h3>
-    <form action="/register" method="POST">
-      <label for="register-name">Имя:</label>
-      <input type="text" id="register-name" name="name" required />
-      <label for="register-email">Email:</label>
-      <input type="email" id="register-email" name="email" required />
-      <label for="register-password">Пароль:</label>
-      <input type="password" id="register-password" name="password" required />
-      <button type="submit">Зарегистрироваться</button>
-    </form>
-  </div>
-</div>
-</html>
-<head>
-  <style>
-    /* Ваши существующие стили */
-
-    /* Добавьте сюда этот блок */
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-image: url('images/background.jpg');
-      background-size: cover;
-      background-position: center;
-      filter: blur(8px);
-      z-index: -1;
-    }
-  </style>
-</head>
+      <input type="email" id="login-email" name="email" required
