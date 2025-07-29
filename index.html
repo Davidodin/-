@@ -146,3 +146,21 @@
   </div>
 </div>
 </html>
+<head>
+  <style>
+    /* Ваши существующие стили */
+
+    /* Добавьте сюда этот блок */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-image: url('images/background.jpg');
+      background-size: cover;
+      background-position: center;
+      filter: blur(8px);
+      z-index: -1;
+    }
+  </style>
+</head>
