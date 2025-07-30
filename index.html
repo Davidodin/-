@@ -10,7 +10,8 @@
     font-family: 'Arial', sans-serif;
     margin: 0; padding: 0;
     position: relative;
-    overflow: hidden;
+    /* ИЗМЕНЕНИЕ: убрал overflow: hidden; чтобы была прокрутка */
+    overflow-y: auto; /* разрешить вертикальную прокрутку */
     background: transparent; /* чтобы не перекрывать фон */
   }
 
@@ -181,7 +182,4 @@ type="submit">Зарегистрироваться</button>
   </div>
 </div>
 </body>
-html, body {
-  overflow-y: auto;
-}  
 </html>
